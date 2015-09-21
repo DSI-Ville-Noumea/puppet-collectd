@@ -1,3 +1,57 @@
+## 2015-09-03 Release 4.2.0
+
+### New features
+
+* Add support for types.db
+* Add plugin::netlink
+* Add collectd::plugin::ceph
+* Add support for the new AllPortsSummary option
+* plugin/mysql: Add innodbstats and slavenotifications
+* plugin/snmp: Remove sorting of Values option in data block
+* plugin/snmp: Support InstancePrefix, Scale and Shift options
+* plugin/logfile:  Add support for PrintSeverity option (fix #317)
+* plugin/exec: Exec plugin can also be used with a parameterized class.
+
+### Bug fixes
+
+* plugin/snmp: Check if Table option is defined
+
+## 2015-08-05 Release 4.1.2
+
+Fix .travis.yml so that deploys work, better
+
+## 2015-08-05 Release 4.1.1
+
+Fix .travis.yml so that deploys work
+
+## 2015-08-05 Release 4.1.0
+
+This module now lives on the puppet community github organization.
+
+### New features
+
+* Add option to not install collectd-iptables on centos 6
+* Allow iptables chains parameter to be an array
+* Support UdevNameAttr attribute on disk plugin (fixes #300)
+
+## 2015-07-26 Release 4.0.0
+
+### Backwards-incompatible changes:
+
+* Exec plugin was renamed from collectd::plugin::exec to collectd::plugin::exec::cmd to support multiple execs
+* Write_graphite was renamed from collectd::plugin::write_graphite to collectd::plugin::write_graphite::carbon to supports multiple carbon backends
+
+### New features
+
+* Support for the aggregation, chain, and protocols plugins
+* Swap and Memory plugins now support ValuesAbsolute and ValuesPercentage
+* OpenVPN plugin now supports multiple statusfiles
+
+### Bug fixes
+
+* Fixed bug preventing multiple instances of curl_json
+* Fixed write_http plugin on RedHat
+
 ## 2015-06-16 Release 3.4.0
 
 ### Backwards-incompatible changes:
